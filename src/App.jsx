@@ -1,45 +1,21 @@
-import { useState } from "react";
-import Header from "./Header";
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from "./Header";
+import Home from "./Home";
+import ToDo from "./ToDo";
+import About from "./About";
 import React from 'react'
 
 function App() {
-
-const [list, setList] = useState([]);
-const [input, setInput] = useState ("");
-
-const addTodo = (todo) => {
-  const newTodo = {
-    id: Math.random(),
-    todo: todo
-  }
-
-  setList([...list,newTodo]);
-
-  setInput("");
-};
-
-const deleateTodo = (id) => {
-  const newList = list.filter((todo) => todo.id !== id);
-  setList(newList);
-};
-
   return (
-    <div>
-      <h1>ToDo List</h1>
-      <input type="text" value={input} onChange={(e) => setInput(e.target.value)}/>
-      <button onClick={() => addTodo(input)}>Lägg till i listan</button>
-
-      <ul>
-        {list.map((todo) => (
-          <li key={todo.id}>
-          {todo.todo}
-          <button onClick={() => deleateTodo(todo.id)}>X</button>
-          </li>
-        ))}
-      </ul>
-
-    </div>
+<BrowserRouter>
+  <Header></Header>    
+  <Routes>
+  <Route  path="/Home" element={<Home />} />
+  <Route  path="/to-do-list" element={<ToDo />} />
+  <Route  path="/About" element={<About />} />
+  </Routes>
+</BrowserRouter>
   );
 }
 

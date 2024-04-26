@@ -9,61 +9,55 @@ body {
   background-color: #2d4356;
 }
 
-.square {
-  background: #a76f6f;
-  border: 3px solid #2d4356;
-  border-radius: 1px;
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 40px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
+.App {
   text-align: center;
-  width: 40px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-Body {
+  background-color: #282c34;
+  min-height: 73vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.board-row:after {
-  clear: both;
-  content: "";
-  display: table;
+.App-link {
+  color: #61dafb;
 }
 
-.status {
-  color: #eab2a0;
-  margin-bottom: 10px;
-  text-transform: uppercase;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.game {
-  margin: 20px;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.text{
+  color:chartreuse;
+  background-color: rgb(226, 15, 15);
+  padding:50px;
+  font-size: large;
 }
 
-ol {
-  color: #eab2a0;
-  padding: 18px;
-}
-
-.go-to-button {
-  background-color: #eab2a0;
-  border: none;
-  border-radius: 3px;
-  color: #2d4356;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 10px;
-  padding: 5px;
-}
-
-a {
-  color: #eab2a0;
-  text-decoration: none;
-  margin: 10px;
+.orange {
+  padding: 10px;
+  color: orangered;
+  background-color:#243544;
 }

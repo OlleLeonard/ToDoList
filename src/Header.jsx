@@ -1,29 +1,17 @@
-import React from "react";
+import { Link } from "react-router-dom";
+
 
 const Header = () => {
   return (
-    <header style={headerStyle}>
-      <h1 style={titleStyle}>Tic Tac Toe</h1>
-      <div>
-        <a href="#">Spel</a>
-        <a href="#">Länkar</a>
+    <nav className="App">
+      <h1>The List Site</h1>
+      <div className="orange">
+      <Link to="/Home" className="orange">Home</Link>
+       <Link to="/to-do-list" className="orange">Create list</Link>
+       <Link to="/About" className="orange">About</Link>
       </div>
-    </header>
+    </nav>
   );
-};
+}
 
-// Styles
-const headerStyle = {
-  color: "#eab2a0",
-  padding: "20px",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-};
-
-const titleStyle = {
-  fontSize: "2rem",
-  margin: "0",
-};
-
-export default Header;
+export default  Header; 
