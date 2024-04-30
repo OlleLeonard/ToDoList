@@ -1,47 +1,19 @@
-import React from 'react'
-import { useState } from "react";
+
+import React, { useState } from 'react';
+import FunctionList from "./components/FunctionList";
+import List from "./components/FunctionList";
 
 function ToDo() {
-
-    const [list, setList] = useState([]);
-    const [input, setInput] = useState ("");
-    
-    const addTodo = (todo) => {
-      const newTodo = {
-        id: Math.random(),
-        todo: todo
-      }
-    
-      setList([...list,newTodo]);
-    
-      setInput("");
-    };
-    
-    const deleateTodo = (id) => {
-      const newList = list.filter((todo) => todo.id !== id);
-      setList(newList);
-    };
-
+  const [input, setInput] = useState("");
 
   return (
-    <div>
- 
-    <h1>ToDo List</h1>
-    <input type="text" value={input} onChange={(e) => setInput(e.target.value)}/>
-    <button onClick={() => addTodo(input)}>Lägg till i listan</button>
-
-    <ul>
-      {list.map((todo) => (
-        <li key={todo.id}>
-        {todo.todo}
-        <button onClick={() => deleateTodo(todo.id)}>Ta bort</button>
-        </li>
-      ))}
-    </ul>
-
-  </div>
-  )
+    <div className="App-Body">
+      <FunctionList>
+        <input type="text" value={input} onChange={(e) => setInput(e.target.value)} />
+        <List />
+      </FunctionList>
+    </div>
+  );
 }
 
-
-export default ToDo
+export default ToDo;

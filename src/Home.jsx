@@ -1,22 +1,16 @@
 
 import Duck from './Duck.webp';
 
-import Header from "./Header";
-
-
 function Home() {
   return (
     
-    <div className="App">
-        
-
-      
-      <bread className="App-Body">
-  <h1>Welcome!</h1>
-        <img src={Duck} className="App-logo"/>
-
-      </bread>
-
+    <div className="Center">
+      <div className="App-Body">
+        <h1>Welcome!</h1>
+        <img src={Duck} className="Duck-logo"/>
+        <h2>To the list site</h2>
+        <p> Here you can create lists such as: "to do lists, shopping lists, bucket lists" or whatever you can think of!</p>
+      </div>
     </div>
   );
 }

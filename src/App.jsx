@@ -1,6 +1,6 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from "./Header";
+import Header from "./components/Header";
 import Home from "./Home";
 import ToDo from "./ToDo";
 import About from "./About";
@@ -11,7 +11,7 @@ function App() {
 <BrowserRouter>
   <Header></Header>    
   <Routes>
-  <Route  path="/Home" element={<Home />} />
+  <Route  path="/" element={<Home />} />
   <Route  path="/to-do-list" element={<ToDo />} />
   <Route  path="/About" element={<About />} />
   </Routes>
